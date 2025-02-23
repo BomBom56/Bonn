@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุขสันต์วันเกิด!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>สุขสันต์วันเกิด!</h1>
+        <p>ขอให้มีความสุขมาก ๆ ในวันเกิดนี้ 🎉🎂</p>
+        
+        <!-- แสดงรูปเจ้าของวันเกิด -->
+        <div class="photo-container">
+            <img id="birthdayPhoto" src="photo1.jpg" alt="รูปวันเกิด" class="birthday-photo">
+        </div>
+
+        <button onclick="playMusic()">กดเพื่อฟังเพลง</button>
+        <audio id="birthdaySong" src="birthday.mp3"></audio>
+    </div>
+
+    <!-- ลูกโป่ง -->
+    <div class="balloons"></div>
+
+    <!-- เค้กวันเกิด -->
+    <div id="cake" class="cake">
+        <img src="birthday-cake.png" alt="เค้กวันเกิด">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
