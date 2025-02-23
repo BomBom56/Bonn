@@ -12,23 +12,6 @@ function playMusic() {
     }
 }
 
-// สลับรูปภาพอัตโนมัติพร้อมเอฟเฟกต์เฟดเข้าออก
-let images = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
-let index = 0;
-let photo = document.getElementById("birthdayPhoto");
-
-function changePhoto() {
-    photo.style.opacity = 0;
-
-    setTimeout(() => {
-        index = (index + 1) % images.length;
-        photo.src = images[index];
-        photo.style.opacity = 1;
-    }, 1000);
-}
-
-setInterval(changePhoto, 3000);
-
 // ฟังก์ชันเพิ่มลูกโป่งและเสียงแตกเมื่อคลิก
 let balloonContainer = document.querySelector(".balloons");
 let maxBalloons = 5;
@@ -60,13 +43,12 @@ function playPopSound() {
     this.style.display = "none"; // ซ่อนลูกโป่งหลังจากคลิก
 }
 
-// ฟังก์ชันโชว์เค้กวันเกิดเมื่อกดปุ่ม
-function showCake() {
-    document.getElementById("cake").style.display = "block";
+// ฟังก์ชันเปิดของขวัญและแสดงคำอวยพร
+function openGift() {
+    document.getElementById("message").style.display = "block";
 }
 
-// เริ่มเพิ่มลูกโป่งและแสดงเค้กเมื่อโหลดหน้าเว็บ
+// เริ่มเพิ่มลูกโป่งเมื่อโหลดหน้าเว็บ
 window.onload = function () {
     addBalloon();
-    setTimeout(showCake, 5000); // แสดงเค้กหลังจาก 5 วินาที
 };
